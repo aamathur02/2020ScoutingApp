@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">2020 Scouting App</string>
+    <string name="welcomeScreenTitle">Infinite Recharge Scouting App</string>
+    <string name="scouterName">Enter Your Name Here:</string>
+    <string name="matchNumber">Enter the Match Number Here:</string>
+    <string name="robotNumber">Enter the Robot Number Here:</string>
+    <string name="EditName">Name</string>
+    <string name="editMatch">Match</string>
+    <string name="editRobot">Robot</string>
+    <string name="submit_FirstActivity">Submit</string>
 </resources>

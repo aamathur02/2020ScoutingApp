@@ -12,6 +12,11 @@ public class Match implements Parcelable {
     //TODO: add additional fields for match info
 
 
+    public Match() {
+
+    }
+
+
     protected Match(Parcel in) {
         robotNumber = in.readInt();
         matchNumber = in.readInt();

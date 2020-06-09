@@ -14,4 +14,20 @@
     <string name="hadClimbed">Has Robot Climbed?</string>
     <string name="hasTranslated">Has Robot Translated?</string>
     <string name="postMatchTitleText">Post Match Data</string>
+    <string name="autoActivityTitleText">Autonomous Data</string>
+    <string name="autocycleStartButton">Start Auto Cycle</string>
+    <string name="autoEndCycleButton">End Auto Cycle</string>
+    <string name="pickupLocation">Ball Pickup Location</string>
+    <string name="ownFedder">Own Feeder Station</string>
+    <string name="oppFeeder">Opponent\'s Feeder Station</string>
+    <string name="openField">Open Field</string>
+    <string name="promptPickupLocation">Where were cells picked up?</string>
+    <string name="promtGoal">Where were cells deposited?</string>
+    <string name="promtInner">Inner Port</string>
+    <string name="promtOuter">Outer Port</string>
+    <string name="promptLower">Lower Port</string>
+    <string name="promtLocLine">Init Line</string>
+    <string name="promptLocFrontTrench">Front Trench</string>
+    <string name="promptLocBackTrench">Back Trench</string>
+    <string name="promtLocTriangle">Triangle</string>
 </resources>

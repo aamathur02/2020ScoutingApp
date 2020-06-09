@@ -8,4 +8,10 @@
     <string name="editMatch">Match</string>
     <string name="editRobot">Robot</string>
     <string name="submit_FirstActivity">Submit</string>
+    <string name="submit_PostMatchActivity">Submit Match</string>
+    <string name="hasBroken">Robot Broken?</string>
+    <string name="hasJammed">Have Power Cells Jammed?</string>
+    <string name="hadClimbed">Has Robot Climbed?</string>
+    <string name="hasTranslated">Has Robot Translated?</string>
+    <string name="postMatchTitleText">Post Match Data</string>
 </resources>

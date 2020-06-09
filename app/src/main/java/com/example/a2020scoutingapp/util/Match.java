@@ -5,9 +5,16 @@ import android.os.Parcelable;
 
 public class Match implements Parcelable {
 
+    //fields to be updated in prematch activity
     public int robotNumber;
     public int matchNumber;
     public String scouterName;
+
+    //fields to be updates after tele-op
+    public boolean hasClimbed;
+    public boolean hasBroken;
+    public boolean hasJammed;
+    public boolean hasTranslated;
 
     //TODO: add additional fields for match info
 

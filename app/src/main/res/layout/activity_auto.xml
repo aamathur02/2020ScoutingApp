@@ -25,9 +25,10 @@
                 android:textSize="36sp" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/autoStartButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="startAutoCycle"
                 android:text="@string/autocycleStartButton" />
 
             <TextView
@@ -37,8 +38,9 @@
                 android:text="@string/promptPickupLocation" />
 
             <RadioGroup
+                android:id="@+id/pickupRadioGroup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -75,8 +77,9 @@
                 android:text="@string/promptLower" />
 
             <com.example.a2020scoutingapp.widget.Counter
+                android:id="@+id/lowerPortInput"
                 android:layout_width="match_parent"
-                android:layout_height="35dp" >
+                android:layout_height="35dp">
 
             </com.example.a2020scoutingapp.widget.Counter>
 
@@ -87,8 +90,9 @@
                 android:text="@string/promtOuter" />
 
             <com.example.a2020scoutingapp.widget.Counter
+                android:id="@+id/outerPortInput"
                 android:layout_width="match_parent"
-                android:layout_height="35dp" >
+                android:layout_height="35dp">
 
             </com.example.a2020scoutingapp.widget.Counter>
 
@@ -99,8 +103,9 @@
                 android:text="@string/promtInner" />
 
             <com.example.a2020scoutingapp.widget.Counter
+                android:id="@+id/innerPortInput"
                 android:layout_width="match_parent"
-                android:layout_height="35dp" >
+                android:layout_height="35dp">
 
             </com.example.a2020scoutingapp.widget.Counter>
 
@@ -111,8 +116,9 @@
                 android:text="@string/promtGoal" />
 
             <RadioGroup
+                android:id="@+id/shootLocationInput"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -150,9 +156,10 @@
             </RadioGroup>
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/autoRndCycleButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="endAutoCycle"
                 android:text="@string/autoEndCycleButton" />
 
         </LinearLayout>

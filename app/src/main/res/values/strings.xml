@@ -30,4 +30,5 @@
     <string name="promptLocFrontTrench">Front Trench</string>
     <string name="promptLocBackTrench">Back Trench</string>
     <string name="promtLocTriangle">Triangle</string>
+    <string name="moveOnToTele">Move on to Tele-op</string>
 </resources>

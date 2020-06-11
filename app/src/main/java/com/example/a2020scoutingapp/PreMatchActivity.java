@@ -86,9 +86,9 @@ public class PreMatchActivity extends AppCompatActivity {
         int match = Integer.parseInt(((TextView) mMatchNumberInput).getText().toString());
         String name = ((TextView) mScouterNameInput).getText().toString();
 
-        in.robotNumber = team;
-        in.matchNumber  = match;
-        in.scouterName = name;
+        in.setRobotNumber(team);
+        in.setMatchNumber(match);
+        in.setScouterName(name);
         return in;
     }
 }

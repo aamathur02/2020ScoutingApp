@@ -3,18 +3,22 @@ package com.example.a2020scoutingapp.util;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+
 public class Match implements Parcelable {
 
     //fields to be updated in prematch activity
-    public int robotNumber;
-    public int matchNumber;
-    public String scouterName;
+    private int robotNumber;
+    private int matchNumber;
+    private String scouterName;
 
     //fields to be updates after tele-op
     public boolean hasClimbed;
     public boolean hasBroken;
     public boolean hasJammed;
     public boolean hasTranslated;
+
+    private ArrayList<Cycle> autoCycleList = new ArrayList<Cycle>();
 
     //TODO: add additional fields for match info
 
@@ -53,4 +57,21 @@ public class Match implements Parcelable {
             return new Match[size];
         }
     };
+
+
+    public void setRobotNumber (int in) {
+        robotNumber = in;
+    }
+
+    public void setMatchNumber (int in) {
+        matchNumber = in;
+    }
+
+    public void setScouterName (String in) {
+        scouterName = in;
+    }
+
+    public void addToAutoCycleArray (Cycle in) {
+        autoCycleList.add(in);
+    }
 }

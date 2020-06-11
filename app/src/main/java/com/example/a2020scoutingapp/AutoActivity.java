@@ -1,11 +1,13 @@
 package com.example.a2020scoutingapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
 
 import com.example.a2020scoutingapp.util.Cycle;
+import com.example.a2020scoutingapp.util.Match;
 import com.example.a2020scoutingapp.widget.Counter;
 
 public class AutoActivity extends AppCompatActivity {
@@ -17,7 +19,9 @@ public class AutoActivity extends AppCompatActivity {
     private Counter outerPortInput;
     private Counter innerPortInput;
 
-    boolean cycleActive = false;
+    private boolean cycleActive = false;
+
+    private Match match;
 
 
     @Override
@@ -31,6 +35,11 @@ public class AutoActivity extends AppCompatActivity {
         lowerPortInput = findViewById(R.id.lowerPortInput);
         outerPortInput = findViewById(R.id.outerPortInput);
         innerPortInput = findViewById(R.id.innerPortInput);
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            match = bundle.getParcelable("preMatchObject");
+        }
 
     }
 
@@ -57,15 +66,61 @@ public class AutoActivity extends AppCompatActivity {
 
     //linked to end Auto Cycle Button
     public void endAutoCycle(View view) {
-        int low  = lowerPortInput.getValue();
-        int out = outerPortInput.getValue();
-        int in = innerPortInput.getValue();
+        if (cycleActive) {
 
-        //TODO: find what radio button is pressed and send that into Cycle contuctor
+            int low = lowerPortInput.getValue();
+            int out = outerPortInput.getValue();
+            int in = innerPortInput.getValue();
 
-        Cycle cycle = new Cycle(low, out, in, 0,0);
-        resetScreen();
+            Cycle.pickupLocation pickup;
 
+            int pickupInt = pickupInput.getCheckedRadioButtonId();
+            switch (pickupInt) {
+                case 0:
+                    pickup = Cycle.pickupLocation.HUMANLOADING;
+                    break;
+                case 1:
+                    pickup = Cycle.pickupLocation.OPPOSITEHUMANLOADING;
+                    break;
+                case 2:
+                    pickup = Cycle.pickupLocation.OPENFIELD;
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + pickupInt);
+            }
+
+            Cycle.scoreLocation score;
+            int scoreInt = scoreInput.getCheckedRadioButtonId();
+            switch (scoreInt) {
+                case 0:
+                    score = Cycle.scoreLocation.TRIANGLE;
+                    break;
+                case 1:
+                    score = Cycle.scoreLocation.INIT_LINE;
+                    break;
+                case 2:
+                    score = Cycle.scoreLocation.BACK_TRENCH;
+                    break;
+                case 3:
+                    score = Cycle.scoreLocation.FRONT_TRENCH;
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + scoreInt);
+            }
+
+
+            Cycle cycle = new Cycle(low, out, in, pickup, score);
+            populateData(match, cycle);
+            resetScreen();
+        }
+        cycleActive = false;
+
+    }
+
+    public void moveToTeleop(View view) {
+        Intent intentTeleop = new Intent(AutoActivity.this, TeleopActivity.class);
+        intentTeleop.putExtra("autoObject", match);
+        startActivity(intentTeleop);
     }
 
     private void resetScreen() {
@@ -75,5 +130,11 @@ public class AutoActivity extends AppCompatActivity {
         outerPortInput.setValue(0);
         innerPortInput.setValue(0);
     }
+
+    private Match populateData(Match in, Cycle cycle) {
+        in.addToAutoCycleArray(cycle);
+        return in;
+    }
+
 
 }

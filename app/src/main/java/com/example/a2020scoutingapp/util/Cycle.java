@@ -6,19 +6,22 @@ public class Cycle {
     int outerPortBallsScored;
     int innerPortBallsScored;
 
-    public enum pickupLocation {HUMANLOADING, OPPOSITEHUMANLOADING, OPENFIELD;}
+    public enum pickupLocation {HUMANLOADING, OPPOSITEHUMANLOADING, OPENFIELD}
 
     private pickupLocation pickup;
 
-    public enum scoreLocation {FRONT_TRENCH, BACK_TRENCH, INIT_LINE, TRIANGLE;}
+    public enum scoreLocation {FRONT_TRENCH, BACK_TRENCH, INIT_LINE, TRIANGLE}
 
     private scoreLocation score;
 
-    public Cycle(int low, int outer, int inner, int pickUpLocationInput, int scoreLocationLocation) {
+    public Cycle(int low, int outer, int inner, pickupLocation pickupIn, scoreLocation scoreIn) {
         this.lowBallsScored = low;
         this.outerPortBallsScored = outer;
         this.innerPortBallsScored = inner;
+        this.pickup = pickupIn;
+        this.score = scoreIn;
 
+        /**
         switch (pickUpLocationInput) {
             case 0:
                 pickup = pickupLocation.HUMANLOADING;
@@ -45,6 +48,7 @@ public class Cycle {
                 score = scoreLocation.BACK_TRENCH;
                 break;
         }
+         */
 
     }
 }

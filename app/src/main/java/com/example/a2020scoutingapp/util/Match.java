@@ -32,6 +32,7 @@ public class Match implements Parcelable {
         robotNumber = in.readInt();
         matchNumber = in.readInt();
         scouterName = in.readString();
+        autoCycleList = in.readArrayList(Cycle.class.getClassLoader()); //Not sure if this is correct but we'll see
     }
 
     @Override
@@ -39,6 +40,7 @@ public class Match implements Parcelable {
         dest.writeInt(robotNumber);
         dest.writeInt(matchNumber);
         dest.writeString(scouterName);
+        //dest.writeArray TODO: figure out how to wrote the arrayList
     }
 
     @Override

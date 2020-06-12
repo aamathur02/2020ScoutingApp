@@ -25,7 +25,7 @@
                 android:textSize="36sp" />
 
             <Button
-                android:id="@+id/autoStartButton"
+                android:id="@+id/teleStartButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="startAutoCycle"
@@ -163,7 +163,7 @@
                 android:text="@string/autoEndCycleButton" />
 
             <Button
-                android:id="@+id/moveToTeleopButton"
+                android:id="@+id/moveToTeleButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="moveToTeleop"

@@ -31,4 +31,8 @@
     <string name="promptLocBackTrench">Back Trench</string>
     <string name="promtLocTriangle">Triangle</string>
     <string name="moveOnToTele">Move on to Tele-op</string>
+    <string name="teleopIntroText">Tele-op Data</string>
+    <string name="startTEleCycle">Start Tele-op Cycle</string>
+    <string name="endTelecycle">End Tele-op Cycle</string>
+    <string name="moveontoendgame">Proceed to Endgame</string>
 </resources>

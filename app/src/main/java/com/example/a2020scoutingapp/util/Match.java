@@ -3,6 +3,7 @@ package com.example.a2020scoutingapp.util;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Match implements Parcelable {
@@ -19,6 +20,7 @@ public class Match implements Parcelable {
     public boolean hasTranslated;
 
     private ArrayList<Cycle> autoCycleList = new ArrayList<Cycle>();
+    private ArrayList<Cycle> teleopCycleList = new ArrayList<Cycle>();
 
     //TODO: add additional fields for match info
 
@@ -33,6 +35,7 @@ public class Match implements Parcelable {
         matchNumber = in.readInt();
         scouterName = in.readString();
         autoCycleList = in.readArrayList(Cycle.class.getClassLoader()); //Not sure if this is correct but we'll see
+        teleopCycleList = in.readArrayList((Cycle.class.getClassLoader()));
     }
 
     @Override
@@ -75,5 +78,9 @@ public class Match implements Parcelable {
 
     public void addToAutoCycleArray (Cycle in) {
         autoCycleList.add(in);
+    }
+
+    public void addToTeleopCycleArray (Cycle in) {
+        teleopCycleList.add(in);
     }
 }

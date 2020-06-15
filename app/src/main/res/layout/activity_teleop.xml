@@ -80,7 +80,7 @@
             <com.example.a2020scoutingapp.widget.Counter
                 android:id="@+id/lowerPortInputTele"
                 android:layout_width="match_parent"
-                android:layout_height="35">
+                android:layout_height="35dp">
 
             </com.example.a2020scoutingapp.widget.Counter>
 

@@ -8,11 +8,11 @@ public class Cycle {
 
     public enum pickupLocation {HUMANLOADING, OPPOSITEHUMANLOADING, OPENFIELD}
 
-    private pickupLocation pickup;
+    public pickupLocation pickup;
 
     public enum scoreLocation {FRONT_TRENCH, BACK_TRENCH, INIT_LINE, TRIANGLE}
 
-    private scoreLocation score;
+    public scoreLocation score;
 
     public Cycle(int low, int outer, int inner, pickupLocation pickupIn, scoreLocation scoreIn) {
         this.lowBallsScored = low;
@@ -49,6 +49,17 @@ public class Cycle {
                 break;
         }
          */
+    }
 
+    public int getLowBallsScored() {
+        return lowBallsScored;
+    }
+
+    public int getInnerPortBallsScored() {
+        return innerPortBallsScored;
+    }
+
+    public int getOuterPortBallsScored() {
+        return outerPortBallsScored;
     }
 }

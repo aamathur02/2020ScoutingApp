@@ -27,33 +27,34 @@
                 android:textSize="30sp" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/hasTranslated" />
-
-            <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/brokenInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hasBroken" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/hasJammed" />
-
-            <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/climbedInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hadClimbed" />
 
-            <Button
-                android:id="@+id/button2"
+            <CheckBox
+                android:id="@+id/translateInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/hasTranslated" />
+
+            <CheckBox
+                android:id="@+id/jammedInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hasJammed" />
+
+            <Button
+                android:id="@+id/submitMatchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="submitMatch"
                 android:text="@string/submit_PostMatchActivity" />
 
         </LinearLayout>

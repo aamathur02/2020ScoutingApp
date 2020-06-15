@@ -3,7 +3,6 @@ package com.example.a2020scoutingapp.util;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Match implements Parcelable {
@@ -82,5 +81,57 @@ public class Match implements Parcelable {
 
     public void addToTeleopCycleArray (Cycle in) {
         teleopCycleList.add(in);
+    }
+
+    public void setHasClimbed(boolean in) {
+        hasClimbed = in;
+    }
+
+    public void setHasJammed(boolean in) {
+        hasJammed = in;
+    }
+
+    public void setHasBroken(boolean in) {
+        hasBroken = in;
+    }
+
+    public void setHasTranslated(boolean in) {
+        hasTranslated = in;
+    }
+
+    public int getRobotNumber () {
+        return robotNumber;
+    }
+
+    public String getScouterName () {
+        return scouterName;
+    }
+
+    public int getMatchNumber () {
+        return matchNumber;
+    }
+
+    public boolean getClimbed() {
+        return hasClimbed;
+    }
+
+    public boolean getTranslated() {
+        return hasTranslated;
+    }
+
+    public boolean getBroken() {
+        return hasBroken;
+    }
+
+    public boolean getJammed() {
+        return hasJammed;
+    }
+
+    public ArrayList<Cycle> getAutoCycleList () {
+        return autoCycleList;
+    }
+
+    public ArrayList<Cycle> getTeleopCycleList () {
+        return teleopCycleList;
     }
 }
